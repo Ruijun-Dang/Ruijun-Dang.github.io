@@ -354,6 +354,11 @@ export const publications: Publication[] = [
 
 export const news: NewsItem[] = [
   {
+    date: "26 Sep 2026",
+    content: "Publications | Our work on lightning NOx emissions is now published in GRL. Check it out: https://doi.org/10.1029/2026GL124557",
+    type: "publication"
+  },
+  {
     date: "13 May 2026",
     content: "I joined Peking University as an Assistant Professor at the Institute of Remote Sensing and GIS, School of Earth and Space Sciences.",
     type: "event"
