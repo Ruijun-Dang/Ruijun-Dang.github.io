@@ -134,7 +134,7 @@ export const researchAreas: ResearchArea[] = [
       "We developed a satellite-based indicator using observations of NH3 and NO2 columns to diagnose PM2.5 nitrate formation sensitivity regimes — providing a simple, globally applicable tool for air quality managers. Applying this approach to East Asia, Europe, and North America, we find that sensitivity regimes vary strongly by region. This tool has also proven effective in monitoring long-term changes in nitrate sensitivity, informing adjustments in emission reduction strategies."
     ],
     image: "/Picture2.png",
-    relatedPublications: "Dang et al., 2023, GRL; Dang et al., 2024, ES&T; Oak et al., 2025, ACP"
+    relatedPublications: "Dang et al., 2023, GRL; Dang et al., 2024, ES&T; Oak et al., 2025, ACP; Pendergrass et al., 2025, GRL"
   },
   {
     title: "Understanding Air Pollution Trends: Health and Climatic Impacts",
