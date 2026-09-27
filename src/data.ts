@@ -111,7 +111,7 @@ export const members: Member[] = [
     links: { 
       scholar: "https://scholar.google.com/citations?user=_ulA8XYAAAAJ&hl=en", 
       researchgate: "https://www.researchgate.net",
-      cv: "https://www.ruijundang.pro/static/pdf/RuijunDang_CV.pdf",
+      cv: "/CV_DangRuijun_20260927.pdf",
       email: "mailto:rdang@pku.edu.cn"
     }
   }
@@ -125,7 +125,7 @@ export const researchAreas: ResearchArea[] = [
       "We aim to better understand background NO2, its sources and sinks, using satellite observations, in situ measurements, and state-of-the-art atmospheric chemistry models. We developed a new geostationary satellite product to monitor free tropospheric (FT) NO2 and used it to constrain lightning NOx emissions. This product provides the first-ever diurnal FT NO2 observations over North America, revealing that current model estimates of lightning NOx emissions are significantly too high."
     ],
     image: "/Picture1.gif",
-    relatedPublications: "Dang et al., 2025, PNAS; Dang et al., 2023, ACP; Shah et al., 2023, ACP"
+    relatedPublications: "Dang et al., 2026, GRL; Dang et al., 2025, PNAS; Dang et al., 2023, ACP; Shah et al., 2023, ACP"
   },
   {
     title: "Inferring PM2.5 Nitrate Control Strategy from Satellites",
@@ -134,7 +134,7 @@ export const researchAreas: ResearchArea[] = [
       "We developed a satellite-based indicator using observations of NH3 and NO2 columns to diagnose PM2.5 nitrate formation sensitivity regimes — providing a simple, globally applicable tool for air quality managers. Applying this approach to East Asia, Europe, and North America, we find that sensitivity regimes vary strongly by region. This tool has also proven effective in monitoring long-term changes in nitrate sensitivity, informing adjustments in emission reduction strategies."
     ],
     image: "/Picture2.png",
-    relatedPublications: "Dang et al., 2023, GRL; Dang et al., 2024, ES&T; Oak et al., 2025, ACP"
+    relatedPublications: "Dang et al., 2023, GRL; Dang et al., 2024, ES&T; Oak et al., 2025, ACP; Pendergrass et al., 2025, GRL"
   },
   {
     title: "Understanding Air Pollution Trends: Health and Climatic Impacts",
@@ -148,6 +148,30 @@ export const researchAreas: ResearchArea[] = [
 ];
 
 export const publications: Publication[] = [
+  {
+    id: "pub23",
+    title: "Lightning source of nitrogen oxides (NOx) inferred from geostationary satellites: global implications for oxidant chemistry",
+    authors: ["Dang, R.", "Jacob, D. J.", "He, M.", "Clifton, O. E.", "Li, K.", "Liao, H."],
+    venue: "Geophysical Research Letters",
+    year: 2026,
+    pdf: "https://doi.org/10.1029/2026GL124557"
+  },
+  {
+    id: "pub24",
+    title: "Space-based observation of decadal variations of ammonium sulfate aerosols over northern China",
+    authors: ["Zheng, Y.", "Zeng, Z.-C.", "Zhou, R.", "Clarisse, L.", "Clerbaux, C.", "Dang, R.", "Wei, J.", "Tang, M.", "Liu, M.", "Hu, M."],
+    venue: "Geophysical Research Letters",
+    year: 2026,
+    pdf: "https://doi.org/10.1029/2026GL124853"
+  },
+  {
+    id: "pub25",
+    title: "Geostationary observations of atmospheric ammonia over East Asia: spatio-temporal variations revealed by three years of FY-4B/GIIRS measurements",
+    authors: ["Sheng, M.", "Zhou, R.", "Hua, J.", "Han, S.", "Liu, S.", "Zhang, L.", "Wang, W.", "Dang, R.", "Cao, H.", "Chen, Z.", "Gu, Y.", "Liu, M.", "Lee, L.", "Qi, C.", "Lu, F.", "Han, C.", "Shephard, M. W.", "Guendouz, N.", "Viatte, C.", "Clarisse, L.", "Van Damme, M.", "Clerbaux, C.", "Zeng, Z.-C."],
+    venue: "Atmospheric Chemistry and Physics",
+    year: 2026,
+    pdf: "https://doi.org/10.5194/acp-26-7803-2026"
+  },
   {
     id: "pub1",
     title: "High-resolution geostationary satellite observations of free tropospheric NO2 over North America: implications for lightning emissions",
@@ -329,6 +353,11 @@ export const publications: Publication[] = [
 ];
 
 export const news: NewsItem[] = [
+  {
+    date: "26 Sep 2026",
+    content: "Publications | Our work on lightning NOx emissions is now published in GRL. Check it out: https://doi.org/10.1029/2026GL124557",
+    type: "publication"
+  },
   {
     date: "13 May 2026",
     content: "I joined Peking University as an Assistant Professor at the Institute of Remote Sensing and GIS, School of Earth and Space Sciences.",

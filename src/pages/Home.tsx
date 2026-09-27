@@ -87,7 +87,13 @@ export default function Home() {
                     {item.date}
                   </p>
                   <p className="text-[clamp(1.1rem,1.8vw,1.25rem)] text-gray-800 leading-relaxed font-semibold group-hover:text-[#d44a1c] transition-colors">
-                    {item.content}
+                    {item.content.split(/(https?:\/\/\S+)/g).map((part, partIndex) =>
+                      part.startsWith('https://') || part.startsWith('http://') ? (
+                        <a key={partIndex} href={part} target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 break-all">
+                          {part}
+                        </a>
+                      ) : part
+                    )}
                   </p>
                 </motion.div>
               ))}
