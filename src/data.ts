@@ -1,9 +1,13 @@
+import zhongxingweiPhoto from './assets/zhongxingwei.jpeg';
+
 export interface Member {
   name: string;
   role: 'PI' | 'Postdoc' | 'PhD Student' | 'Masters Student' | 'Undergraduate' | 'Alumni';
   education: string;
   image: string;
   bio: string;
+  researchInterests?: string;
+  funFact?: string;
   office?: string;
   timeline?: {
     title: string;
@@ -25,6 +29,7 @@ export interface Member {
 export interface Publication {
   id: string;
   title: string;
+  // A trailing * marks a corresponding author; Publications.tsx renders it as a superscript.
   authors: string[];
   venue: string;
   year: number;
@@ -114,6 +119,20 @@ export const members: Member[] = [
       cv: "/CV_DangRuijun_20260927.pdf",
       email: "mailto:rdang@pku.edu.cn"
     }
+  },
+  {
+    name: "Xingwei Zhong 钟兴炜",
+    role: "Undergraduate",
+    education: "B.S., Spatial Information and Digital Technology, Wuhan University",
+    image: zhongxingweiPhoto,
+    bio: "Undergraduate student at Wuhan University.",
+    researchInterests: "Atmospheric composition, remote sensing, and air pollution.",
+    funFact: "I enjoy playing badminton and photography.",
+    links: {
+      email: "mailto:chungxw@whu.edu.cn",
+      scholar: "https://scholar.google.com/citations?user=bF6odDYAAAAJ&hl=zh-CN",
+      github: "https://github.com/ZaxWave"
+    }
   }
 ];
 
@@ -151,7 +170,8 @@ export const publications: Publication[] = [
   {
     id: "pub23",
     title: "Lightning source of nitrogen oxides (NOx) inferred from geostationary satellites: global implications for oxidant chemistry",
-    authors: ["Dang, R.", "Jacob, D. J.", "He, M.", "Clifton, O. E.", "Li, K.", "Liao, H."],
+    // Dang, R. is a corresponding author on this paper; keep the trailing *.
+    authors: ["Dang, R.*", "Jacob, D. J.", "He, M.", "Clifton, O. E.", "Li, K.", "Liao, H."],
     venue: "Geophysical Research Letters",
     year: 2026,
     pdf: "https://doi.org/10.1029/2026GL124557"

@@ -1,7 +1,7 @@
 import { motion } from 'motion/react';
 import { members } from '../data';
 import { PageContainer } from '../components/Shared';
-import { Twitter, Linkedin, Github, GraduationCap, Link2, Mail, Globe, BookOpen, FileText } from 'lucide-react';
+import { Linkedin, Github, Globe, BookOpen, FileText } from 'lucide-react';
 
 export default function Group() {
   const roles = ['PI', 'Postdoc', 'PhD Student', 'Undergraduate'];
@@ -53,13 +53,13 @@ export default function Group() {
                         )}
                       </div>
                       <div className="flex-1 flex flex-col min-h-[14rem]">
-                        <h4 className="text-3xl md:text-[2.5rem] font-sans font-medium text-gray-900 mb-2 uppercase tracking-tight leading-none">
+                        <h4 className={`text-3xl md:text-[2.5rem] font-sans font-medium text-gray-900 mb-2 tracking-tight leading-none ${member.role === 'PI' ? 'uppercase' : ''}`}>
                           {member.name.split('党瑞君')[0]}
                           {member.name.includes('党瑞君') && (
                             <span className="text-[34px] mt-0 normal-case tracking-normal font-normal">党瑞君</span>
                           )}
                         </h4>
-                        <div className="text-gray-600 text-lg md:text-xl font-normal mb-6">
+                        <div className={`text-gray-600 font-normal mb-6 ${member.role === 'PI' ? 'text-lg md:text-xl' : 'text-[15px]'}`}>
                           {member.education}
                         </div>
 
@@ -73,12 +73,17 @@ export default function Group() {
                           </div>
                         )}
 
+                        {(member.researchInterests || member.funFact || (member.role !== 'PI' && member.links?.email)) && (
+                          <div className="space-y-2 mb-8 text-[15px] text-gray-700 leading-relaxed">
+                            {member.researchInterests && <p><strong className="font-semibold text-gray-900">Research interests:</strong> {member.researchInterests}</p>}
+                            {member.funFact && <p><strong className="font-semibold text-gray-900">Fun fact:</strong> {member.funFact}</p>}
+                            {member.role !== 'PI' && member.links?.email && (
+                              <p><strong className="font-semibold text-gray-900">Email:</strong> <a href={member.links.email} className="hover:text-[#d44a1c] underline underline-offset-4 decoration-gray-300">{member.links.email.replace('mailto:', '')}</a></p>
+                            )}
+                          </div>
+                        )}
+
                         <div className="flex flex-wrap gap-6 text-gray-400 mt-auto">
-                          {member.links?.email && member.role !== 'PI' && (
-                            <a href={member.links.email} className="hover:text-red-500 transition-colors" title="Email">
-                              <Mail className="w-5 h-5 -mt-2" />
-                            </a>
-                          )}
                           {member.links?.scholar && (
                             <a href={member.links.scholar} target="_blank" rel="noopener noreferrer" className="hover:text-blue-600 transition-colors" title="Google Scholar">
                               <BookOpen className="w-5 h-5 -mt-2" />

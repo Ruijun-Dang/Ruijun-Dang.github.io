@@ -34,7 +34,7 @@ export default function Publications() {
                     <p className="text-[15px] text-gray-600 mb-2 leading-relaxed">
                       {pub.authors.map((author, i) => (
                         <span key={i} className={author.includes('Dang, R.') ? 'text-gray-900 font-semibold' : ''}>
-                          {author}{i < pub.authors.length - 1 ? ', ' : ''}
+                          {author.replace(/\*$/, '')}{author.endsWith('*') && <sup title="Corresponding author">*</sup>}{i < pub.authors.length - 1 ? ', ' : ''}
                         </span>
                       ))}
                     </p>
