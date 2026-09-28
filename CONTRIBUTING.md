@@ -16,14 +16,35 @@ This website was created and refined with assistance from Google AI Studio and C
 - Motion
 - Lucide React
 
+## Branch Naming
+
+Use a personal fork as `origin` and the main repository as `upstream`. Start each new task from the latest `upstream/main`:
+
+```bash
+git fetch upstream main
+git switch -c <type>/<scope>-<summary> upstream/main
+```
+
+Branch names use lowercase kebab case. Choose a type from `feat`, `fix`, `docs`, `refactor`, or `chore`; use the affected area as the scope; and describe one reviewable change in the summary. Do not use a date unless the change belongs to a dated release.
+
+Examples:
+
+```text
+feat/group-add-member
+fix/publications-author-marker
+docs/repo-contribution-guidelines
+```
+
+Keep unrelated work on separate branches and in separate pull requests. Do not reuse a branch after its pull request is merged.
+
 ## Local Development
 
 Prerequisite: Node.js
 
-Install dependencies:
+Install dependencies from the lockfile:
 
 ```bash
-npm install
+npm ci
 ```
 
 Run the development server:
@@ -49,6 +70,24 @@ Type-check:
 ```bash
 npm run lint
 ```
+
+Before committing, check the affected page and assets locally. Run `npm run lint`, `npm run build`, and `git diff --check`. Review `git status` and the staged diff so that generated `dist/` files, temporary files, private source documents, and credentials are not committed.
+
+## Commits and Pull Requests
+
+Use one logical change per commit. Write commit subjects in English as `<type>(<scope>): <imperative summary>`, using the same types and scopes as branch names. Keep the subject specific and avoid a trailing period.
+
+Examples:
+
+```text
+feat(group): add Xingwei Zhong
+fix(publications): mark corresponding author
+docs(repo): define contribution workflow
+```
+
+Stage the intended files explicitly and inspect `git diff --cached` before committing. Push the branch to `origin`, then open a pull request against `upstream/main`. The pull request should summarize the change and list the checks performed; include a screenshot when the page layout changes. Do not push directly to `upstream/main`.
+
+For AI-assisted changes, present the exact diff and validation results to Carlz for human review before opening or reopening each pull request. Wait for explicit approval for that specific pull request; approval of earlier work does not apply to later changes.
 
 ## Deployment
 
@@ -82,10 +121,11 @@ Main pages are in:
 src/pages/
 ```
 
-Static assets are in:
+Assets served from the site root are in `public/`. Assets imported by components or data files are in `src/assets/`:
 
 ```text
 public/
+src/assets/
 ```
 
 Important sharing and SEO assets:
