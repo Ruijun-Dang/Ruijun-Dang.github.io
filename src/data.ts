@@ -2,6 +2,7 @@ import zhongxingweiPhoto from './assets/zhongxingwei.jpeg';
 
 export interface Member {
   name: string;
+  chineseName?: string;
   role: 'PI' | 'Postdoc' | 'PhD Student' | 'Masters Student' | 'Undergraduate' | 'Alumni';
   education: string;
   image: string;
@@ -76,6 +77,7 @@ export const groupData = {
 export const members: Member[] = [
   {
     name: "Ruijun Dang 党瑞君",
+    chineseName: "党瑞君",
     role: "PI",
     education: "Assistant Professor",
     image: "/profile.png",
@@ -122,6 +124,7 @@ export const members: Member[] = [
   },
   {
     name: "Xingwei Zhong 钟兴炜",
+    chineseName: "钟兴炜",
     role: "Undergraduate",
     education: "B.S., Spatial Information and Digital Technology, Wuhan University",
     image: zhongxingweiPhoto,
