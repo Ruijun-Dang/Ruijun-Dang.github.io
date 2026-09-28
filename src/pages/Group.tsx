@@ -53,7 +53,7 @@ export default function Group() {
                         )}
                       </div>
                       <div className="flex-1 flex flex-col min-h-[14rem]">
-                        <h4 className={`text-3xl md:text-[2.5rem] font-sans font-medium text-gray-900 mb-2 tracking-tight leading-none ${member.role === 'PI' ? 'uppercase' : ''}`}>
+                        <h4 className={`font-sans font-medium text-gray-900 mb-2 tracking-tight leading-none ${member.role === 'PI' ? 'text-3xl md:text-[2.5rem] uppercase' : 'text-2xl md:text-[2rem]'}`}>
                           {member.name.split('党瑞君')[0]}
                           {member.name.includes('党瑞君') && (
                             <span className="text-[34px] mt-0 normal-case tracking-normal font-normal">党瑞君</span>
