@@ -1,4 +1,5 @@
 import zhongxingweiPhoto from './assets/zhongxingwei.jpeg';
+import renyuhaoPhoto from './assets/renyuhao.png';
 
 export interface Member {
   name: string;
@@ -8,7 +9,7 @@ export interface Member {
   image: string;
   bio: string;
   researchInterests?: string;
-  funFact?: string;
+  hobbies?: string;
   office?: string;
   timeline?: {
     title: string;
@@ -116,9 +117,9 @@ export const members: Member[] = [
       }
     ],
     links: { 
-      scholar: "https://scholar.google.com/citations?user=_ulA8XYAAAAJ&hl=en", 
+      scholar: "https://scholar.google.com/citations?hl=en&user=qoj-KEAAAAAJ&view_op=list_works&gmla=AN_4Zu_uSDd5-NLdIzBj0BH5NRr85GwvtLa1gkZT3k00KxzBJbcdjwLnvlPaUKs4O_rFOCzsdGJ_j53A2MgD83ELKxR6KEO2qYr4TRUimOjM6Q-nYZgRIjbJT7l58A",
       researchgate: "https://www.researchgate.net",
-      cv: "/CV_DangRuijun_20260927.pdf",
+      cv: "/CV_DangRuijun_20261108.pdf",
       email: "mailto:rdang@pku.edu.cn"
     }
   },
@@ -130,11 +131,24 @@ export const members: Member[] = [
     image: zhongxingweiPhoto,
     bio: "Undergraduate student at Wuhan University.",
     researchInterests: "Atmospheric composition, remote sensing, and air pollution.",
-    funFact: "I enjoy playing badminton and photography.",
+    hobbies: "I enjoy playing badminton and photography.",
     links: {
       email: "mailto:chungxw@whu.edu.cn",
       scholar: "https://scholar.google.com/citations?user=bF6odDYAAAAJ&hl=zh-CN",
       github: "https://github.com/ZaxWave"
+    }
+  },
+  {
+    name: "Yuhao Ren 任宇浩",
+    chineseName: "任宇浩",
+    role: "Undergraduate",
+    education: "B.S., Remote Sensing Science and Technology, Peking University",
+    image: renyuhaoPhoto,
+    bio: "Undergraduate student at Peking University.",
+    researchInterests: "Atmospheric chemistry, remote sensing.",
+    hobbies: "In my free time, I enjoy playing slow-pitch softball and mobile games, as well as traveling.",
+    links: {
+      email: "mailto:yunnhan@stu.pku.edu.cn"
     }
   }
 ];

@@ -73,10 +73,10 @@ export default function Group() {
                           </div>
                         )}
 
-                        {(member.researchInterests || member.funFact || (member.role !== 'PI' && member.links?.email)) && (
+                        {(member.researchInterests || member.hobbies || (member.role !== 'PI' && member.links?.email)) && (
                           <div className="space-y-2 mb-8 text-[15px] text-gray-700 leading-relaxed">
                             {member.researchInterests && <p><strong className="font-semibold text-gray-900">Research interests:</strong> {member.researchInterests}</p>}
-                            {member.funFact && <p><strong className="font-semibold text-gray-900">Fun fact:</strong> {member.funFact}</p>}
+                            {member.hobbies && <p><strong className="font-semibold text-gray-900">Hobbies:</strong> {member.hobbies}</p>}
                             {member.role !== 'PI' && member.links?.email && (
                               <p><strong className="font-semibold text-gray-900">Email:</strong> <a href={member.links.email} className="hover:text-[#d44a1c] underline underline-offset-4 decoration-gray-300">{member.links.email.replace('mailto:', '')}</a></p>
                             )}
